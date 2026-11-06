@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         imageView = findViewById(R.id.imageView);
         buttonWstecz = findViewById(R.id.buttonWstecz);
+        buttonDalej = findViewById(R.id.buttonDalej);
 
 
         buttonWstecz.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +50,18 @@ public class MainActivity extends AppCompatActivity {
                     aktualneZdjecie--;
                 }
 
+                imageView.setImageResource(zdjeciaId.get(aktualneZdjecie));
+            }
+        });
+
+        buttonDalej.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (aktualneZdjecie == zdjeciaId.size() - 1) {
+                    aktualneZdjecie = 0;
+                } else {
+                    aktualneZdjecie++;
+                }
                 imageView.setImageResource(zdjeciaId.get(aktualneZdjecie));
             }
         });
