@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonWstecz;
     private Button buttonDalej;
     private int aktualneZdjecie = 0;
-    private List<Integer> zdjeciaId = new ArrayList<Integer>();
+    private static List<Integer> zdjeciaId = new ArrayList<Integer>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +32,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        zdjeciaId.add(R.drawable.hauntedhouse);
-        zdjeciaId.add(R.drawable.pumpkin);
-        zdjeciaId.add(R.drawable.jackolanterns);
+        dodajZdjecia();
 
         imageView = findViewById(R.id.imageView);
         buttonWstecz = findViewById(R.id.buttonWstecz);
@@ -66,5 +64,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private static void dodajZdjecia() {
+        zdjeciaId.add(R.drawable.hauntedhouse);
+        zdjeciaId.add(R.drawable.pumpkin);
+        zdjeciaId.add(R.drawable.jackolanterns);
     }
 }

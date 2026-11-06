@@ -25,6 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_margin="10dp"
             android:backgroundTint="#4CAFFF"
             android:text="Wstecz" />
 
@@ -38,8 +39,9 @@
             android:id="@+id/buttonDalej"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#4CAFFF"
             android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:backgroundTint="#4CAFFF"
             android:text="Dalej" />
     </LinearLayout>
 
